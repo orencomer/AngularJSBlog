@@ -7,7 +7,8 @@ var MetronicApp = angular.module("MetronicApp", [
     "ui.router", 
     "ui.bootstrap", 
     "oc.lazyLoad",  
-    "ngSanitize"
+    "ngSanitize",
+    "ngTable"
 ]); 
 
 /* Configure ocLazyLoader(refer: https://github.com/ocombe/ocLazyLoad) */
@@ -162,10 +163,6 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
                         name: 'MetronicApp',
                         insertBefore: '#ng_load_plugins_before',
                         files: [
-                            '/assets/global/plugins/datatables/datatables.min.css',
-                            '/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.css',
-                            '/assets/global/plugins/datatables/datatables.all.min.js',
-                            '/assets/pages/scripts/table-datatables-managed.min.js',
                             '/ClientApp/js/controllers/PostsController.js'
                         ]
                     });
